@@ -5,4 +5,4 @@ fullstack testapp
 `docker build -t testapp-ui -f .docker/Dockerfile .`
 
 # run
-`dockder run -p 8080:80 testapp-ui` 
+`docker run -p 8080:80 testapp-ui` 
