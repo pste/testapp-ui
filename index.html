@@ -4,5 +4,22 @@
   </head>
   <body>
     <h2>hello, world</h2>
+    <span id="txtMsg"></span>
+    <button id="btnAPI">API call</button>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+    <script>
+      $(document).ready(() => {
+        $('#btnAPI').on('click', () => {
+          const url = 'http://localhost:8081'
+          $.get(url).done(( res ) => {
+            $('#txtMsg').text(res.message)
+          });
+        });
+      });
+    </script>
   </body>
 </html>
